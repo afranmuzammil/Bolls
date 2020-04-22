@@ -12,12 +12,33 @@ public class SpownerController : MonoBehaviour
     public float maxWait = 1f;
     public float minForce = 12f;
     public float maxForce = 17f;
+    public float timeDecrease;
+
+    private float timeBtwSpawns;
 
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SpawnFruits());
+
+        timeBtwSpawns = maxWait;
+    }
+
+    public void Update()
+    {
+        if (timeBtwSpawns <= 0)
+        {
+            timeBtwSpawns = maxWait;
+            if (maxWait > minWait)
+            {
+                maxWait -= timeDecrease;
+            }
+        }
+        else
+        {
+            timeBtwSpawns -= Time.deltaTime;
+        }
     }
 
     private IEnumerator SpawnFruits()
@@ -42,7 +63,7 @@ public class SpownerController : MonoBehaviour
 
             GameObject Debree = Instantiate(go, t.position, t.rotation);
 
-            //Debree.GetComponent<Rigidbody2D>().AddForce(t.transform.up * Random.Range(minForce, maxForce), ForceMode2D.Impulse);
+            Debree.GetComponent<Rigidbody>().AddForce(-t.transform.up * Random.Range(minForce, maxForce), ForceMode.Impulse);
 
             Debug.Log("fruits are spawned");
 

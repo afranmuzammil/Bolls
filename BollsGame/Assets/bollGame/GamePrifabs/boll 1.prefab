@@ -123,4 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06dd6f249bd09c478431858ebc70163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlastEffect: {fileID: 100010, guid: 560b41a4e1a480149beb67ef30df5da8, type: 3}
+  BlastEffect: {fileID: 100000, guid: 921a3ff88856fe04ebc86b196fd8cc59, type: 3}

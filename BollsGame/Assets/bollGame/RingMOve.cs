@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class RingMOve : MonoBehaviour
 {
+    [Range(0.2f, 10f)]
     public float Speed = 10.0f;
    
+    public GameObject SparkEffect;
     public GameObject BlastEffect;
     public Transform myTransfrom;
+    
     float dirX;
     public Rigidbody rb;
    
@@ -39,10 +42,19 @@ public class RingMOve : MonoBehaviour
         if (col.gameObject.CompareTag("Dibree"))
         {
             Destroy(col.gameObject);
-            GameObject G = Instantiate(BlastEffect, myTransfrom.position, Quaternion.identity);
-            Destroy(G, 0.8f);  
+            GameObject B = Instantiate(SparkEffect, myTransfrom.position, Quaternion.identity);
+            Destroy(B, 0.8f);
 
         }
+        else if (col.gameObject.CompareTag("Bomb"))
+        {
+            Destroy(gameObject);
+            GameObject G = Instantiate(BlastEffect, myTransfrom.position, Quaternion.identity);
+            Destroy(G, 0.8f);
+            Debug.Log("Bomb went off");
+
+        }
+
     }
 }
     

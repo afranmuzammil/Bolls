@@ -12,8 +12,8 @@ public class DibreeScript : MonoBehaviour
         {
             
             GameObject G = Instantiate(BlastEffect, transform.position, Quaternion.identity);
-            Destroy(G, 2);
-            Destroy(gameObject, 1f);
+            Destroy(G, 1);
+            Destroy(gameObject, 0.8f);
         }
     }
 
