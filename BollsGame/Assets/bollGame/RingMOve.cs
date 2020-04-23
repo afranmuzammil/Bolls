@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RingMOve : MonoBehaviour
 {
@@ -10,10 +11,13 @@ public class RingMOve : MonoBehaviour
     public GameObject SparkEffect;
     public GameObject BlastEffect;
     public Transform myTransfrom;
-    
-    float dirX;
     public Rigidbody rb;
-   
+  /*  public*/ int ScorePoints;
+
+    float dirX;
+    public Text scoreText;
+
+
 
     // Update is called once per frame
     void Update()
@@ -44,6 +48,9 @@ public class RingMOve : MonoBehaviour
             Destroy(col.gameObject);
             GameObject B = Instantiate(SparkEffect, myTransfrom.position, Quaternion.identity);
             Destroy(B, 0.8f);
+            ScorePoints++;
+            Debug.Log(ScorePoints);
+          //  scoreText.text = ScorePoints.ToString("0");
 
         }
         else if (col.gameObject.CompareTag("Bomb"))

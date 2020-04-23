@@ -15,14 +15,12 @@ public class DibreeScript : MonoBehaviour
             Destroy(G, 1);
             Destroy(gameObject, 0.8f);
             
-            Debug.Log("boll missed");
-          
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+     
     }
 }

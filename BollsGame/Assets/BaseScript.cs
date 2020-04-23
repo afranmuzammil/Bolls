@@ -1,23 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class BaseScript : MonoBehaviour
 {
+    public int lifes=3;
     public float missBollCount;
+    /*public*/ Text LostBOllText;
 
-    private void OnCollisionEnter(Collision col)
+  
+    private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Dibree"))
         {
             missBollCount++;
-            Debug.Log(missBollCount);
-           
-
+            lifes--;
+           // LostBOllText.text = lifes.ToString("0");
+         //   Debug.Log(missBollCount);
+       
         }
     }
 
-
+   
     // Update is called once per frame
     void Update()
     {
