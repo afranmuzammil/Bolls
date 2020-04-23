@@ -52,6 +52,8 @@ public class RingMOve : MonoBehaviour
             GameObject G = Instantiate(BlastEffect, myTransfrom.position, Quaternion.identity);
             Destroy(G, 0.8f);
             Debug.Log("Bomb went off");
+            Time.timeScale = 0f;//temp most e replced by game over inshallah
+            Debug.Log("GameOver");
 
         }
 
