@@ -23,7 +23,7 @@ public class RingMOve : MonoBehaviour
     void Update()
     {
 
-        dirX = Input.acceleration.x * Speed;
+        dirX = Input.acceleration.x * Speed*Time.fixedDeltaTime;
 
 
         if (Input.GetKey(KeyCode.A)){
@@ -50,7 +50,7 @@ public class RingMOve : MonoBehaviour
             Destroy(B, 0.8f);
             ScorePoints++;
             Debug.Log(ScorePoints);
-          //  scoreText.text = ScorePoints.ToString("0");
+            scoreText.text = ScorePoints.ToString("0");
 
         }
         else if (col.gameObject.CompareTag("Bomb"))
@@ -59,7 +59,7 @@ public class RingMOve : MonoBehaviour
             GameObject G = Instantiate(BlastEffect, myTransfrom.position, Quaternion.identity);
             Destroy(G, 0.8f);
             Debug.Log("Bomb went off");
-            Time.timeScale = 0f;//temp most e replced by game over inshallah
+           Time.timeScale = 0f;//temp most e replced by game over inshallah
             Debug.Log("GameOver");
 
         }

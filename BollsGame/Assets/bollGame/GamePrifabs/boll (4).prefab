@@ -123,4 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06dd6f249bd09c478431858ebc70163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlastEffect: {fileID: 100000, guid: 921a3ff88856fe04ebc86b196fd8cc59, type: 3}
+  SmokeEffect: {fileID: 100000, guid: 921a3ff88856fe04ebc86b196fd8cc59, type: 3}
+  waterSplash: {fileID: 8134910751302031603, guid: 2c13b83bc7bc98f4c8f84da1ca31ff25,
+    type: 3}
