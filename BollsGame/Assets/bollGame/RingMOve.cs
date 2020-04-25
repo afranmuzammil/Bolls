@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RingMOve : MonoBehaviour
 {
     [Range(0.2f, 10f)]
-    public float Speed = 10.0f;
+    public  float Speed = 10.0f;
    
     public GameObject SparkEffect;
     public GameObject BlastEffect;
@@ -17,6 +17,7 @@ public class RingMOve : MonoBehaviour
     float dirX;
     public Text scoreText;
 
+   
 
 
     // Update is called once per frame

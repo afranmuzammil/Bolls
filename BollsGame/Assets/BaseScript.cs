@@ -16,6 +16,9 @@ public class BaseScript : MonoBehaviour
             LostBollText.text = lifes.ToString("0");
             // Debug.Log(missBollCount);
 
+        }else if (col.gameObject.CompareTag("Bomb"))
+        {
+            Destroy(col.gameObject, 0.5f);
         }
     }
 

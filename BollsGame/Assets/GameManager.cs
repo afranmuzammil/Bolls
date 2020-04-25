@@ -5,24 +5,39 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public float timeStart = 60;
-    public Text textBox;
+    public Slider SpeedSlider;
+     
     // Start is called before the first frame update
     void Start()
     {
-        textBox.text = timeStart.ToString();
+      
     }
-
-    // Update is called once per frame
     void Update()
     {
-        timeStart -= Time.deltaTime;
-        textBox.text = Mathf.Round(timeStart).ToString();
+       
+    }
+    public void SpeedContorller()
+    {   
+        float speedChager = GetComponent<RingMOve>().Speed;
+        SpeedSlider.maxValue = speedChager;
+    }
+ 
+    public void Replay()
+    {
 
+    }
 
-        if(timeStart <= 0)
-        {
-            Time.timeScale = 0f;
-        }
+    public void Pause()
+    {
+
+    }
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("application Quit");
+    }
+    public void MainManu()
+    {
+
     }
 }
