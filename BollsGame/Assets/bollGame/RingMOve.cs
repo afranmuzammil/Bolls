@@ -12,6 +12,7 @@ public class RingMOve : MonoBehaviour
     public GameObject BlastEffect;
     public Transform myTransfrom;
     public Rigidbody rb;
+   // public GameObject WaterMoveSound;
   /*  public*/ int ScorePoints;
 
     float dirX;
@@ -25,16 +26,18 @@ public class RingMOve : MonoBehaviour
     {
 
         dirX = Input.acceleration.x * Speed*Time.fixedDeltaTime;
-
+      //  Instantiate(WaterMoveSound, transform.position, Quaternion.identity);
 
         if (Input.GetKey(KeyCode.A)){
 
             transform.Translate(Vector3.left*Speed*Time.fixedDeltaTime);
+           // Instantiate(WaterMoveSound, transform.position, Quaternion.identity);
         }
         if (Input.GetKey(KeyCode.D))
         {
 
             transform.Translate(Vector3.right*Speed*Time.fixedDeltaTime);
+            //Instantiate(WaterMoveSound, transform.position, Quaternion.identity);
         }
     }
     void FixedUpdate()

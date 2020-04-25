@@ -285,7 +285,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SmokeEffect: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
-  waterSplash: {fileID: 0}
+  waterSplash: {fileID: 8134910751302031603, guid: 2c13b83bc7bc98f4c8f84da1ca31ff25,
+    type: 3}
+  waterSound: {fileID: 1956392843997955889, guid: 92a42059a36405c40b9d1f005af85c05,
+    type: 3}
 --- !u!1001 &5120799697516253904
 PrefabInstance:
   m_ObjectHideFlags: 0

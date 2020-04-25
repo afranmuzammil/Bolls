@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/bollGame/Cartoon Castle Building Kit/Scenes/MainMenu.unity
+    guid: a5576d164df1e19459695d36281637ef
+  - enabled: 1
     path: Assets/bollGame/Cartoon Castle Building Kit/Scenes/Example Scene 7.unity
     guid: 44efe4177ae573c44a014ece472d1cab
+  - enabled: 1
+    path: Assets/bollGame/Cartoon Castle Building Kit/Scenes/Example Scene 8.unity
+    guid: fc90c551ab2ebb047ae979d757eb7b45
   m_configObjects: {}
