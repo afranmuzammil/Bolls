@@ -108,11 +108,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0d70b69b4032d48a6b3fea62aa3be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 3.78
   SparkEffect: {fileID: 100006, guid: ccbcfc705a39717429590a9f247ec30a, type: 3}
   BlastEffect: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
   myTransfrom: {fileID: 2583067274313470642}
   rb: {fileID: 2034201968}
+  sparkSound: {fileID: 1701856099049865450, guid: b3bc55f61df4d544f9ca233bee4736a3,
+    type: 3}
+  scoreText: {fileID: 0}
 --- !u!54 &2034201968
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,7 +130,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!1001 &1764139806
 PrefabInstance:

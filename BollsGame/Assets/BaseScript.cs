@@ -7,6 +7,7 @@ public class BaseScript : MonoBehaviour
     public int lifes=3;
     public float missBollCount;
     public Text LostBollText;
+    public GameManager Manager;
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag("Dibree"))
@@ -42,6 +43,7 @@ public class BaseScript : MonoBehaviour
         {
             Debug.Log("GameOver");
             Time.timeScale = 0f;//temp most e replced by game over inshallah
+            Manager.gameOver();
         }
     }
 }

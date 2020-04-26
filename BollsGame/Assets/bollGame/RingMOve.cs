@@ -12,6 +12,8 @@ public class RingMOve : MonoBehaviour
     public GameObject BlastEffect;
     public Transform myTransfrom;
     public Rigidbody rb;
+    public GameObject sparkSound;
+    public GameManager Manager;
    // public GameObject WaterMoveSound;
   /*  public*/ int ScorePoints;
 
@@ -49,9 +51,11 @@ public class RingMOve : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Dibree"))
         {
+            GameObject ss = Instantiate(sparkSound, transform.position, Quaternion.identity);
             Destroy(col.gameObject);
             GameObject B = Instantiate(SparkEffect, myTransfrom.position, Quaternion.identity);
             Destroy(B, 0.8f);
+            Destroy(ss, 0.8f);
             ScorePoints++;
             Debug.Log(ScorePoints);
             scoreText.text = ScorePoints.ToString("0");
@@ -64,6 +68,7 @@ public class RingMOve : MonoBehaviour
             Destroy(G, 0.8f);
             Debug.Log("Bomb went off");
            Time.timeScale = 0f;//temp most e replced by game over inshallah
+            Manager.gameOver();
             Debug.Log("GameOver");
 
         }

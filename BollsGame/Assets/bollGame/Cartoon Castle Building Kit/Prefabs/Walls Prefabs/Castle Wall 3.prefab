@@ -106,3 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7955d83eecd6e9e4f854a84ba8646515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifes: 3
+  missBollCount: 0
+  LostBollText: {fileID: 0}
+  Manager: {fileID: 0}

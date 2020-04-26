@@ -6,6 +6,7 @@ public class timer : MonoBehaviour
 {
     public float timeStart = 60;
     public Text textBox;
+    public GameManager Manager;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class timer : MonoBehaviour
         if (timeStart <= 0)
         {
             Time.timeScale = 0f;
+            Manager.gameOver();
         }
 
 

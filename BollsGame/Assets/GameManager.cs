@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Slider SpeedSlider;
     public Button settings;
     public GameObject ButtonSound;
+    public GameObject GameOverUI;
      
     // Start is called before the first frame update
     void Start()
@@ -24,17 +25,23 @@ public class GameManager : MonoBehaviour
        
     }
 
+    public void gameOver()
+    {
+        GameOverUI.SetActive(true);
+    }
+
     public void setting()
     {
         GameObject B = Instantiate(ButtonSound, transform.position, Quaternion.identity);
         pauseManuUi.SetActive(true);
         Time.timeScale = 0f;
         pauseTheGame = true;
+        Destroy(B, 0.5f);
     }
     public void SpeedContorller()
     {   
-        float speedChager = GetComponent<RingMOve>().Speed;
-        SpeedSlider.maxValue = speedChager;
+        //float speedChager = GetComponent<RingMOve>().Speed;
+        //SpeedSlider.maxValue = speedChager;
     }
      
     public void Resume()
@@ -43,8 +50,10 @@ public class GameManager : MonoBehaviour
         pauseManuUi.SetActive(false);
         Time.timeScale = 1f;
         pauseTheGame = false;
-       // pasueactive.SetActive(false);
-       // pauseManuUi.SetActive(true);
+        Destroy(B, 0.5f);
+        GameOverUI.SetActive(false);
+        // pasueactive.SetActive(false);
+        // pauseManuUi.SetActive(true);
     }
 
     public void Repalay()
@@ -52,6 +61,8 @@ public class GameManager : MonoBehaviour
         GameObject B = Instantiate(ButtonSound, transform.position, Quaternion.identity);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
+        Destroy(B, 0.5f);
+        GameOverUI.SetActive(false);
     }
     
     public void Quit()
@@ -59,12 +70,15 @@ public class GameManager : MonoBehaviour
         GameObject B = Instantiate(ButtonSound, transform.position, Quaternion.identity);
         Application.Quit();
         Debug.Log("application Quit");
+        Destroy(B, 0.5f);
+        GameOverUI.SetActive(false);
     }
     public void MainManu()
     {
         GameObject B = Instantiate(ButtonSound, transform.position, Quaternion.identity);
         SceneManager.LoadScene("MainMenu");
-       
+        Destroy(B, 0.5f);
+        GameOverUI.SetActive(false);
         Debug.Log("application main manu");
     }
 }
