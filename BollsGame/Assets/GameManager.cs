@@ -39,9 +39,9 @@ public class GameManager : MonoBehaviour
         Destroy(B, 0.5f);
     }
     public void SpeedContorller()
-    {   
-        //float speedChager = GetComponent<RingMOve>().Speed;
-        //SpeedSlider.maxValue = speedChager;
+    {
+        float speedChager = GetComponent<RingMOve>().Speed;
+        SpeedSlider.maxValue = speedChager;
     }
      
     public void Resume()
@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
 
     public void Repalay()
     {
+       
         GameObject B = Instantiate(ButtonSound, transform.position, Quaternion.identity);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;

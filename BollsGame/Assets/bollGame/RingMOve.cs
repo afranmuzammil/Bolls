@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RingMOve : MonoBehaviour
 {
-    [Range(0.2f, 10f)]
+   // [Range(0.2f, 10f)]
     public  float Speed = 10.0f;
    
     public GameObject SparkEffect;
@@ -27,7 +27,7 @@ public class RingMOve : MonoBehaviour
     void Update()
     {
 
-        dirX = Input.acceleration.x * Speed*Time.fixedDeltaTime;
+        dirX = Input.acceleration.x * Speed*Time.deltaTime;
       //  Instantiate(WaterMoveSound, transform.position, Quaternion.identity);
 
         if (Input.GetKey(KeyCode.A)){
