@@ -6152,7 +6152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 751c91f5eb146f24f972f6c03cce8b5a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.077
+  m_Volume: 0.236
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -28274,7 +28274,7 @@ PrefabInstance:
     - target: {fileID: 7395564585797415384, guid: f07a438d496d4794d8ab70b7c6f0c6ab,
         type: 3}
       propertyPath: Speed
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f07a438d496d4794d8ab70b7c6f0c6ab, type: 3}
@@ -38639,10 +38639,30 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3632583321029673995, guid: 87c156962ca82f745b029ed86a5cc1d7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278144732221974202, guid: 87c156962ca82f745b029ed86a5cc1d7,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5259367344895917243, guid: 87c156962ca82f745b029ed86a5cc1d7,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259367344895917243, guid: 87c156962ca82f745b029ed86a5cc1d7,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259367344895917243, guid: 87c156962ca82f745b029ed86a5cc1d7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87c156962ca82f745b029ed86a5cc1d7, type: 3}
@@ -39208,7 +39228,7 @@ PrefabInstance:
     - target: {fileID: 8683392398059103052, guid: 8d458229f94696141ab1ffc64e1c4a63,
         type: 3}
       propertyPath: timeStart
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8683392399419526252, guid: 8d458229f94696141ab1ffc64e1c4a63,
         type: 3}

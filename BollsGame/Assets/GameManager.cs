@@ -41,7 +41,9 @@ public class GameManager : MonoBehaviour
     public void SpeedContorller()
     {
         float speedChager = GetComponent<RingMOve>().Speed;
-        SpeedSlider.maxValue = speedChager;
+        //SpeedSlider.maxValue = speedChager;
+        speedChager = SpeedSlider.minValue;
+
     }
      
     public void Resume()

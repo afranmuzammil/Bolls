@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RingMOve : MonoBehaviour
 {
    // [Range(0.2f, 10f)]
-    public  float Speed = 10.0f;
+    public  float Speed = 2.0f;
    
     public GameObject SparkEffect;
     public GameObject BlastEffect;
@@ -27,9 +27,10 @@ public class RingMOve : MonoBehaviour
     void Update()
     {
 
-        dirX = Input.acceleration.x * Speed*Time.deltaTime;
-      //  Instantiate(WaterMoveSound, transform.position, Quaternion.identity);
-
+        dirX = Input.acceleration.x * Speed;
+        //  Instantiate(WaterMoveSound, transform.position, Quaternion.identity);
+         
+        
         if (Input.GetKey(KeyCode.A)){
 
             transform.Translate(Vector3.left*Speed*Time.fixedDeltaTime);
@@ -44,7 +45,8 @@ public class RingMOve : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(rb.velocity.x + dirX, 0);
+        //rb.velocity = new Vector2(rb.velocity.x + dirX, 0);
+        rb.velocity = new Vector2( dirX, 0f);
     }
 
     private void OnCollisionEnter(Collision col)

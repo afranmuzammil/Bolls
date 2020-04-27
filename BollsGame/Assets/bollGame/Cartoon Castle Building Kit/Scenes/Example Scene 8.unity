@@ -7837,7 +7837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseManuUi: {fileID: 12817055}
   pasueactive: {fileID: 849430814}
-  SpeedSlider: {fileID: 0}
+  SpeedSlider: {fileID: 1489070246}
   settings: {fileID: 849430815}
   ButtonSound: {fileID: 3613566046419732432, guid: fd5a05685cc0ea54b853d4ae900e7c64,
     type: 3}
@@ -7868,7 +7868,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 751c91f5eb146f24f972f6c03cce8b5a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.096
+  m_Volume: 0.207
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -28064,6 +28064,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87c156962ca82f745b029ed86a5cc1d7, type: 3}
+--- !u!114 &1489070246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4278144732221974202, guid: 87c156962ca82f745b029ed86a5cc1d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1489070245}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1489226935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29306,7 +29318,7 @@ PrefabInstance:
     - target: {fileID: 7395564585797415384, guid: f07a438d496d4794d8ab70b7c6f0c6ab,
         type: 3}
       propertyPath: Speed
-      value: 4
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7395564585797415384, guid: f07a438d496d4794d8ab70b7c6f0c6ab,
         type: 3}
