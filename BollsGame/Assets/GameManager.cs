@@ -13,7 +13,9 @@ public class GameManager : MonoBehaviour
     public Button settings;
     public GameObject ButtonSound;
     public GameObject GameOverUI;
-     
+    //public Animator transitionAnim;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,9 +81,19 @@ public class GameManager : MonoBehaviour
     public void MainManu()
     {
         GameObject B = Instantiate(ButtonSound, transform.position, Quaternion.identity);
+       // StartCoroutine(LoadScence());
         SceneManager.LoadScene("MainMenu");
         Destroy(B, 0.5f);
         GameOverUI.SetActive(false);
         Debug.Log("application main manu");
     }
+
+    //IEnumerator LoadScence()
+    //{
+    //    transitionAnim.SetTrigger("end");
+    //    SceneManager.LoadScene("MainMenu");
+    //    yield return new WaitForSeconds(1.5f);
+        
+    //    //SceneManager.LoadScene(scenceName);
+    //}
 }

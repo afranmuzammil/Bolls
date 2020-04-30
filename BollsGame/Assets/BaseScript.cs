@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BaseScript : MonoBehaviour
 {
-    public int lifes=3;
+    public int lifes=5;
     public float missBollCount;
     public Text LostBollText;
     public GameManager Manager;
@@ -39,7 +39,7 @@ public class BaseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (missBollCount >= 3f)
+        if (missBollCount >= 5f)
         {
             Debug.Log("GameOver");
             Time.timeScale = 0f;//temp most e replced by game over inshallah

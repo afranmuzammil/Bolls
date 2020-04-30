@@ -47,3 +47,7 @@ MonoBehaviour:
   pasueactive: {fileID: 0}
   SpeedSlider: {fileID: 0}
   settings: {fileID: 0}
+  ButtonSound: {fileID: 3613566046419732432, guid: fd5a05685cc0ea54b853d4ae900e7c64,
+    type: 3}
+  GameOverUI: {fileID: 0}
+  transitionAnim: {fileID: 0}
